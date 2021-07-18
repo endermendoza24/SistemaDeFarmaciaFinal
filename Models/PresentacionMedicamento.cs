@@ -27,15 +27,17 @@ namespace SIstemaFarmaciaFinal.Models
         [Column("formaPresentacion")]
         [StringLength(50)]
         public string FormaPresentacion { get; set; }
-        [Column("concentracion(mg/ml)")]
+        [Required]
+        [Column("concentracion")]
         [StringLength(50)]
-        public string ConcentracionMgMl { get; set; }
+        public string Concentracion { get; set; }
         [Required]
         [Column("unidadMedidaPresentacion")]
         [StringLength(50)]
         public string UnidadMedidaPresentacion { get; set; }
         [Required]
-        [StringLength(50)]
+        [Column("Unidades")]
+        [StringLength(50)]        
         public string Unidades { get; set; }
         [Required]
         [Column("subUnidades")]

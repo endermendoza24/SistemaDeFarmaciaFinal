@@ -50,7 +50,7 @@ namespace SIstemaFarmaciaFinal.Controllers
                         IdPresentacionMed = (int)reader["id_PresentacionMed"],
                         UnidadEnvasado = reader["unidadEnvasado"].ToString(),
                         FormaPresentacion = reader["formaPresentacion"].ToString(), //  Se pone el nombre exacto que esta en la tabla de la bd                        
-                        ConcentracionMgMl = reader["[concentracion(mg/ml)]"].ToString(),
+                        Concentracion = reader["concentracion"].ToString(),
                         UnidadMedidaPresentacion = reader["unidadMedidaPresentacion"].ToString(),
                         Unidades = reader["Unidades"].ToString(),
                         SubUnidades = reader["subUnidades"].ToString()
@@ -76,7 +76,7 @@ namespace SIstemaFarmaciaFinal.Controllers
                 cmd.Parameters.Add(new SqlParameter("@codigo", Pre.IdPresentacionMed));  //  estos son los nombres de los parametros del procedimiento almacenado
                 cmd.Parameters.Add(new SqlParameter("@unidadEnvasado", Pre.UnidadEnvasado));
                 cmd.Parameters.Add(new SqlParameter("@formaPresentacion", Pre.FormaPresentacion));
-                cmd.Parameters.Add(new SqlParameter("@concentracion", Pre.ConcentracionMgMl));
+                cmd.Parameters.Add(new SqlParameter("@concentracion", Pre.Concentracion));
                 cmd.Parameters.Add(new SqlParameter("@unidadMedida", Pre.UnidadMedidaPresentacion));
                 cmd.Parameters.Add(new SqlParameter("@unidades", Pre.Unidades));
                 cmd.Parameters.Add(new SqlParameter("@subUnidades", Pre.SubUnidades));
@@ -111,7 +111,7 @@ namespace SIstemaFarmaciaFinal.Controllers
                         IdPresentacionMed = (int)reader["id_PresentacionMed"],
                         UnidadEnvasado = reader["unidadEnvasado"].ToString(), //  nombre exacto con el que sale en la tabla de la base de datos
                         FormaPresentacion = reader["formaPresentacion"].ToString(),
-                        ConcentracionMgMl = reader["[concentracion(mg/ml)]"].ToString(),
+                        Concentracion = reader["concentracion"].ToString(),
                         UnidadMedidaPresentacion = reader["unidadMedidaPresentacion"].ToString(),
                         Unidades = reader["Unidades"].ToString(),
                         SubUnidades = reader["subUnidades"].ToString()

@@ -161,7 +161,7 @@ namespace SIstemaFarmaciaFinal.Data
 
             modelBuilder.Entity<PresentacionMedicamento>(entity =>
             {
-                entity.Property(e => e.ConcentracionMgMl).IsUnicode(false);
+                entity.Property(e => e.Concentracion).IsUnicode(false);
 
                 entity.Property(e => e.FormaPresentacion).IsUnicode(false);
 

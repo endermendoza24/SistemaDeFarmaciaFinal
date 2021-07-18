@@ -1,0 +1,117 @@
+﻿@model SIstemaFarmaciaFinal.Models.Medicamento;
+@{
+    ViewData["Title"] = "Crear";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row" style="width:100%" ;>
+    <div class="col-6">
+        <h2 class="text-primary">Medicamentos</h2>
+    </div>
+    <div class="col-4 text-right">
+        <button type="button" onclick="Limpiar()" class="btn btn-info form-control" data-toggle="modal" data-target="#MiModal">Agregar medicamento</button>
+    </div>
+
+
+</div>
+
+<div class="p-4 border rounded bg-light">
+    <table id="TblDatos" class="table table-bordered table-responsive-lg" style="width: 90%">
+        <thead class="thead-dark">
+            <tr class="table-info">
+                <td>Id medicamento</td>
+                <td>Nombre genérico</td>
+                <td>Estado</td>
+                <td>Vía de administración</td>
+                <td>Id categoría</td>
+                <td>Id inventario</td>                     
+                <td>Acciones</td>
+            </tr>
+        </thead>
+    </table>
+
+</div>
+
+@*Crear la ventana modal*@
+<div class="modal fade" id="MiModal" role="dialog">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class=" modal-content">
+            <form method="post" enctype="multipart/form-data">
+                <div class="modal-header">
+                    <h2 class="modal-title text-primary text-center">Ingreso de nuevo medicamento</h2>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div style="padding-left:15%; padding-right:15%; padding-bottom:30px;">
+                        <div class="row p-3 border-0">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        </div>
+
+                        <input type="hidden" id="CodMedicamento" class="form-control" asp-for="CodMedicamentos" />
+
+                        <div class="form-row" style="padding-top:14px;">
+                            <div class="form-group col-4">
+                                <label>Nombre genérico </label>
+                                <input asp-for="NombreGenerico" id="NombreGenerico" class="form-control" placeholder="Nombre genérico" />
+                                <span asp-validation-for="NombreGenerico" class="text-danger"></span>
+
+                            </div>
+                            @*si llevara otro campo*@
+                            @*<div class="form-group col-md-6">
+                                    <label>Nombre</label>
+                                    <input asp-for="Nombrecategoria" class="form-control" placeholder="Nombres" />
+                                    <span asp-validation-for="Nombrecategoria" class="text-danger"></span>
+
+                                </div>*@
+                        </div>
+                        @*como la descripcion es mas grande*@
+                        <div class="form-group">
+                            <label>Estado</label>
+                            <input asp-for="Estado" id="Estado" class="form-control" placeholder="Estado" />
+                            <span asp-validation-for="Estado" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Vía de administración</label>
+                            <input asp-for="ViaAdministracion" id="ViaAdministracion" class="form-control" placeholder="Vía de administración" />
+                            <span asp-validation-for="ViaAdministracion" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Id categoría</label>
+                            <input asp-for="IdCategoria" id="IdCategoria" class="form-control" placeholder="Id categoría" />
+                            <span asp-validation-for="IdCategoria" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Id inventario</label>
+                            <input asp-for="IdInventario" id="Unidades" class="form-control" placeholder="Id inventario" />
+                            <span asp-validation-for="IdInventario" class="text-danger"></span>
+                        </div>
+                       
+                        @*<div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>estado</label>
+                                    <select asp-for="Estado" id="Estado" class="form-control">
+                                        <option value="true">Activo</option>
+                                        <option value="false">Inactivo</option>
+                                    </select>
+
+                                </div>
+                            </div>*@
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar Ventana</button>
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+</div>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/JSMedicamentos.js"></script>
+
+}
+

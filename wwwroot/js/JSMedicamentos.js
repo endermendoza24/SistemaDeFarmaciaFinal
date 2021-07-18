@@ -3,7 +3,7 @@
 $(document).ready(function () {
     loadDataTable();
 
-    var cod = document.getElementById('IdPresentacionMed'); //  el id del modal
+    var cod = document.getElementById('CodMedicamento'); //  el id del modal
     if (cod.value > 0) {
         $('#MiModal').modal('show');
     }
@@ -11,23 +11,21 @@ $(document).ready(function () {
 });
 
 function Limpiar() {
-    var idPre = document.getElementById('IdPresentacionMed');
-    var unEn = document.getElementById('UnidadEnvasado');
-    var forma = document.getElementById('FormaPresentacion');
-    var concentracion = document.getElementById('Concentracion');
-    var unidadMed = document.getElementById('UnidadMedidaPresentacion');
-    var unidades = document.getElementById('Unidades');
-    var subunidades = document.getElementById('SubUnidades');
+    var idMed = document.getElementById('CodMedicamento');
+    var nomGe = document.getElementById('NombreGenerico');
+    var estado = document.getElementById('Estado');
+    var via = document.getElementById('ViaAdministracion');
+    var idCat = document.getElementById('IdCategoria');
+    var idIn = document.getElementById('IdInventario');
 
     /* var estccat = document.getElementById('Estado');*/
 
-    idPre.value = 0;
-    unEn.value = "";
-    forma.value = "";
-    concentracion.value = "";
-    unidadMed.value = "";
-    unidades.value = "";
-    subunidades.value = "";
+    idMed.value = 0;
+    nomGe.value = "";
+    estado.value = "";
+    via.value = "";
+    idCat.value = "";
+    idIn.value = "";
 
     /*    estccat.value = true;*/
 }
@@ -37,7 +35,7 @@ function eliminar($id) {
 
     swal({
         title: "Mensaje",
-        text: "¿Desea eliminar la forma de presentación seleccionada?",
+        text: "¿Desea eliminar el laboratorio seleccionado?",
         type: "warning",
         showCancelButton: true,
 
@@ -55,7 +53,7 @@ function eliminar($id) {
 
             jQuery.ajax({
 
-                url: "/Presentacion/Eliminar/" + "?id=" + $id,
+                url: "/Medicamentos/Eliminar/" + "?id=" + $id,
                 type: "GET",
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
@@ -84,21 +82,20 @@ function eliminar($id) {
 function loadDataTable() {
     datatable = $('#TblDatos').DataTable({
         "ajax": {
-            "url": "/Presentacion/Todas"
+            "url": "/Medicamentos/Todas"
         },
         "columns": [
-            { "data": "idPresentacionMed", "width": "10%" }, //se deben escribir a como estan en la base de datos, exceptuando si van separados por guion bajo, en ese caso no se debe de poner el guion
-            { "data": "unidadEnvasado", "width": "15%" },
-            { "data": "formaPresentacion", "width": "15%" },
-            { "data": "concentracion", "width": "15%" },
-            { "data": "unidadMedidaPresentacion", "width": "15%" },
-            { "data": "Unidades", "width": "15%" },
-            { "data": "subUnidades", "width": "15%" },
+            { "data": "codMedicamentos", "width": "10%" }, //se deben escribir a como estan en la base de datos, exceptuando si van separados por guion bajo, en ese caso no se debe de poner el guion
+            { "data": "nombreGenerico", "width": "15%" },
+            { "data": "estado", "width": "15%" },
+            { "data": "viaAdministracion", "width": "15%" },
+            { "data": "idCategoria", "width": "15%" },
+            { "data": "idInventario", "width": "15%" },
 
 
             {
-                "data": "idPresentacionMed", "render": function (data, type, row, meta) {
-                    return `<a href="/Presentacion/Crear/${data}" class="btn btn-success text-white" style="cursor:pointer;">
+                "data": "codMedicamentos", "render": function (data, type, row, meta) {
+                    return `<a href="/Medicamentos/Crear/${data}" class="btn btn-success text-white" style="cursor:pointer;">
                          Editar
                             </a>` +
                         "<button class='btn btn-danger btn-sm ml-2' type='button' onclick='eliminar(" + data + ")'>Delete</button>"
