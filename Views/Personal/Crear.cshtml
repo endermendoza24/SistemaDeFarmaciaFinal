@@ -1,0 +1,121 @@
+﻿@model SIstemaFarmaciaFinal.Models.Personal;
+@{
+    ViewData["Title"] = "Crear";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row" style="width:100%" ;>
+    <div class="col-6">
+        <h2 class="text-primary">Lista de personal</h2>
+    </div>
+    <div class="col-4 text-right">
+        <button type="button" onclick="Limpiar()" class="btn btn-info form-control" data-toggle="modal" data-target="#MiModal">Agregar al personal</button>
+    </div>
+
+
+</div>
+
+<div class="p-4 border rounded bg-light">
+    <table id="TblDatos" class="table table-bordered table-responsive-lg" style="width: 90%">
+        <thead class="thead-dark">
+            <tr class="table-info">
+                <td>Id personal</td>
+                <td>Nombres </td>
+                <td> Primer apellido</td>
+                <td> Segundo apellido</td>
+                <td> Direccion </td>
+                <td> Telefono </td>
+                <td>Email</td>
+                @*<td>Estado</td>*@
+                <td>Acciones</td>
+            </tr>
+        </thead>
+    </table>
+
+</div>
+
+@*Crear la ventana modal*@
+<div class="modal fade" id="MiModal" role="dialog">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class=" modal-content">
+            <form method="post" enctype="multipart/form-data">
+                <div class="modal-header">
+                    <h2 class="modal-title text-primary text-center">Ingreso de nuevo personal</h2>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div style="padding-left:15%; padding-right:15%; padding-bottom:30px;">
+                        <div class="row p-3 border-0">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        </div>
+
+                        <input type="hidden" id="IdPersonal" class="form-control" asp-for="IdPersonal" />
+
+                        <div class="form-row" style="padding-top:14px;">
+                            <div class="form-group col-md-6">
+                                <label>Nombre</label>
+                                <input asp-for="Nombre" id="Nombre" class="form-control" placeholder="Nombres" />
+                                <span asp-validation-for="Nombre" class="text-danger"></span>
+
+                            </div>
+                            @*si llevara otro campo*@
+                            <div class="form-group col-md-6">
+                                <label>Primer apellido</label>
+                                <input asp-for="PrimerApellido" class="form-control" placeholder="Primer apellido" />
+                                <span asp-validation-for="PrimerApellido" class="text-danger"></span>
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Segundo apellido</label>
+                                <input asp-for="SegundoApellido" class="form-control" placeholder="segundo apellido" />
+                                <span asp-validation-for="SegundoApellido" class="text-danger"></span>
+
+                            </div>
+                        </div>
+                        @*como la descripcion es mas grande*@
+                        <div class="form-group">
+                            <label>Dirección</label>
+                            <input asp-for="Direccion" id="Direccion" class="form-control" placeholder="Direccion" />
+                            <span asp-validation-for="Direccion" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Teléfono</label>
+                            <input asp-for="Telefono" class="form-control" placeholder="Teléfono" />
+                            <span asp-validation-for="Telefono" class="text-danger"></span>
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Email</label>
+                            <input asp-for="Email" class="form-control" placeholder="email" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+
+                        </div>
+                        @*<div class="form-row">
+            <div class="form-group col-md-6">
+                <label>estado</label>
+                <select asp-for="Estado" id="Estado" class="form-control">
+                    <option value="true">Activo</option>
+                    <option value="false">Inactivo</option>
+                </select>
+
+            </div>
+        </div>*@
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar Ventana</button>
+                    <button type="submit" class="btn btn-primary">Grabar Cambios</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+</div>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/JSPersonal.js"></script>
+
+}
+

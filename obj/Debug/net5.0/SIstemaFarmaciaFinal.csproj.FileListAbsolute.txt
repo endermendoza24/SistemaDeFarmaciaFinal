@@ -90,3 +90,6 @@ C:\Users\HP\Desktop\SIstemaFarmaciaFinal\bin\Debug\net5.0\runtimes\unix\lib\netc
 C:\Users\HP\Desktop\SIstemaFarmaciaFinal\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\HP\Desktop\SIstemaFarmaciaFinal\obj\Debug\net5.0\Razor\Views\Categorias\Crear.cshtml.g.cs
 C:\Users\HP\Desktop\SIstemaFarmaciaFinal\obj\Debug\net5.0\SIstemaFarmaciaFinal.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\SIstemaFarmaciaFinal\obj\Debug\net5.0\Razor\Views\Personal\Crear.cshtml.g.cs
+C:\Users\HP\Desktop\SIstemaFarmaciaFinal\obj\Debug\net5.0\Razor\Views\Laboratorio\Crear.cshtml.g.cs
+C:\Users\HP\Desktop\SIstemaFarmaciaFinal\obj\Debug\net5.0\Razor\Views\Presentacion\Crear.cshtml.g.cs
