@@ -94,3 +94,4 @@ C:\Users\HP\Desktop\SIstemaFarmaciaFinal\obj\Debug\net5.0\Razor\Views\Personal\C
 C:\Users\HP\Desktop\SIstemaFarmaciaFinal\obj\Debug\net5.0\Razor\Views\Laboratorio\Crear.cshtml.g.cs
 C:\Users\HP\Desktop\SIstemaFarmaciaFinal\obj\Debug\net5.0\Razor\Views\Presentacion\Crear.cshtml.g.cs
 C:\Users\HP\Desktop\SIstemaFarmaciaFinal\obj\Debug\net5.0\Razor\Views\Medicamentos\Crear.cshtml.g.cs
+C:\Users\HP\Desktop\SIstemaFarmaciaFinal\obj\Debug\net5.0\Razor\Views\Inventario\Crear.cshtml.g.cs
