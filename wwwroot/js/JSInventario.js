@@ -11,34 +11,30 @@ $(document).ready(function () {
 });
 
 function Limpiar() {
-    var idIn = document.getElementById('IdInventario');
-    var fecha = document.getElementById('FechaEntradaInventario');
-    var nombre = document.getElementById('NombreComercial');
-    var si = document.getElementById('StockInicial');
+    var idin = document.getElementById('IdInventario');
+    var fecha = document.getElementById('fechaEntradaInventario');
+    var stockin = document.getElementById('StockInicial');
     var entrada = document.getElementById('Entradas');
     var salida = document.getElementById('Salidas');
-    var sa = document.getElementById('StockActual');
+    var stockfi = document.getElementById('StockFinal');
     var precio = document.getElementById('PrecioPreventa');
     var costo = document.getElementById('CostoPreventa');
-    var idPre = document.getElementById('IdPresentacionMed');
-    var idLab = document.getElementById('IdLaboratorio');
-    var idCom = document.getElementById('IdCompra');
-
+    var idpre = document.getElementById('IdPresentacionMed');
+    var idlab = document.getElementById('IdLaboratorio');
+    var idcom = document.getElementById('IdCompra');
     /* var estccat = document.getElementById('Estado');*/
 
-    idIn.value = 0;
+    idin.value = 0;
     fecha.value = "";
-    nombre.value = "";
-    si.value = 0;
+    stockin.value = 0;
     entrada.value = 0;
     salida.value = 0;
-    sa.value = 0;
+    stockfi.value = 0;
     precio.value = 0;
     costo.value = 0;
-    idPre.value = 0;
-    idLab.value = 0;
-    idCom.value = 0;
-
+    idpre.value = 0;
+    idlab.value = 0;
+    idcom.value = 0;
     /*    estccat.value = true;*/
 }
 
@@ -47,7 +43,7 @@ function eliminar($id) {
 
     swal({
         title: "Mensaje",
-        text: "¿Desea eliminar inventario seleccionado?",
+        text: "¿Desea eliminar la categoria seleccionada?",
         type: "warning",
         showCancelButton: true,
 
@@ -76,7 +72,7 @@ function eliminar($id) {
 
 
                     } else {
-                        swal("Mensaje", "No se pudo eliminar ", "warning")
+                        swal("Mensaje", "No se pudo eliminar el inventario", "warning")
                     }
                 },
                 error: function (error) {
@@ -97,19 +93,18 @@ function loadDataTable() {
             "url": "/Inventario/Todas"
         },
         "columns": [
-            { "data": "idInventario", "width": "8%" }, //se deben escribir a como estan en la base de datos, exceptuando si van separados por guion bajo, en ese caso no se debe de poner el guion
-            { "data": "fechaEntradaInventario", "width": "8%" },
-            { "data": "nombreComercial", "width": "12%" },
-            { "data": "StockInicial", "width": "8%" },
-            { "data": "Entradas", "width": "8%" },
-            { "data": "Salidas", "width": "8%" },
-            { "data": "StockActual", "width": "8%" },
-            { "data": "PrecioPreventa", "width": "8%" },
-            { "data": "CostoPreventa", "width": "8%" },
-            { "data": "idPresentacionMed", "width": "8%" },
-            { "data": "idLaboratorio", "width": "8%" },
-            { "data": "idCompra", "width": "8%" },
-
+            { "data": "idInventario", "width": "10%" }, //se deben escribir a como estan en la base de datos, exceptuando si van separados por guion bajo, en ese caso no se debe de poner el guion
+            { "data": "fechaEntradaInventario", "width": "7%" },
+            { "data": "nombreComercial", "width": "7%" },
+            { "data": "StockInicial", "width": "7%" },
+            { "data": "Entradas", "width": "7%" },
+            { "data": "Salidas", "width": "7%" },
+            { "data": "StockActual", "width": "7%" },
+            { "data": "PrecioPreventa", "width": "7%" },
+            { "data": "CostoPreventa", "width": "7%" },
+            { "data": "idPresentacionMed", "width": "7%" },
+            { "data": "idLaboratorio", "width": "7%" },
+            { "data": "idCompra", "width": "7%" },
 
             {
                 "data": "idInventario", "render": function (data, type, row, meta) {

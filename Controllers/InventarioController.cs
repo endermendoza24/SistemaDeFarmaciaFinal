@@ -47,18 +47,18 @@ namespace SIstemaFarmaciaFinal.Controllers
                 {
                     Inv = new Inventario()
                     {
-                        IdInventario = (int)reader["id_Inventario"],
-                        FechaEntradaInventario = (System.DateTime)reader["fechaEntrada_Inventario"],
+                        IdInventario = (int)reader["idInventario"],
+                        FechaEntradaInventario = reader["fechaEntradaInventario"].ToString(),
                         NombreComercial = reader["nombreComercial"].ToString(), //  Se pone el nombre exacto que esta en la tabla de la bd                        
-                        StockInicial = (int)reader["Stock_Inicial"],
+                        StockInicial = (int)reader["StockInicial"],
                         Entradas = (int)reader["Entradas"],
                         Salidas = (int)reader["Salidas"],
-                        StockActual = (int)reader["Stock_Actual"],
-                        PrecioPreventa = (float)reader["Precio_Preventa"],
-                        CostoPreventa = (float)reader["Costo_Preventa"],
-                        IdPresentacionMed = (int)reader["id_Presentacion_Med"],
-                        IdLaboratorio = (int)reader["id_Laboratorio"],
-                        IdCompra = (int)reader["id_Compra"]
+                        StockActual = (int)reader["StockActual"],
+                        PrecioPreventa = (float)reader["PrecioPreventa"],
+                        CostoPreventa = (float)reader["CostoPreventa"],
+                        IdPresentacionMed = (int)reader["idPresentacion_Med"],
+                        IdLaboratorio = (int)reader["idLaboratorio"],
+                        IdCompra = (int)reader["idCompra"]
                         //Estado = (bool)reader["Estado"]
                     };
                 }
@@ -119,18 +119,18 @@ namespace SIstemaFarmaciaFinal.Controllers
                 {
                     response.Add(new Inventario()
                     {
-                        IdInventario = (int)reader["id_Inventario"],
-                        FechaEntradaInventario = (System.DateTime)reader["fechaEntrada_Inventario"],
+                        IdInventario = (int)reader["idInventario"],
+                        FechaEntradaInventario = reader["fechaEntradaInventario"].ToString(),
                         NombreComercial = reader["nombreComercial"].ToString(), //  Se pone el nombre exacto que esta en la tabla de la bd                        
-                        StockInicial = (int)reader["Stock_Inicial"],
+                        StockInicial = (int)reader["StockInicial"],
                         Entradas = (int)reader["Entradas"],
                         Salidas = (int)reader["Salidas"],
-                        StockActual = (int)reader["Stock_Actual"],
-                        PrecioPreventa = (float)reader["Precio_Preventa"],
-                        CostoPreventa = (float)reader["Costo_Preventa"],
-                        IdPresentacionMed = (int)reader["id_Presentacion_Med"],
-                        IdLaboratorio = (int)reader["id_Laboratorio"],
-                        IdCompra = (int)reader["id_Compra"]
+                        StockActual = (int)reader["StockActual"],
+                        PrecioPreventa = (float)reader["PrecioPreventa"],
+                        CostoPreventa = (float)reader["CostoPreventa"],
+                        IdPresentacionMed = (int)reader["idPresentacionMed"],
+                        IdLaboratorio = (int)reader["idLaboratorio"],
+                        IdCompra = (int)reader["idCompra"]
                     });
                 }
             }

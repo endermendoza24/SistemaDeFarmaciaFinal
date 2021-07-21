@@ -18,29 +18,33 @@ namespace SIstemaFarmaciaFinal.Models
         }
 
         [Key]
-        [Column("id_Inventario")]
+        [Column("idInventario")]
         public int IdInventario { get; set; }
-        [Column("fechaEntrada_Inventario", TypeName = "datetime")]
-        public DateTime FechaEntradaInventario { get; set; }
+        [Required]
+        [Column("fechaEntradaInventario")]
+        [StringLength(50)]
+        public string FechaEntradaInventario { get; set; }
         [Required]
         [Column("nombreComercial")]
         [StringLength(50)]
         public string NombreComercial { get; set; }
-        [Column("Stock_Inicial")]
+        [Column("StockInicial")]
         public int StockInicial { get; set; }
+        [Column("Entradas")]
         public int Entradas { get; set; }
+        [Column("Salidas")]
         public int Salidas { get; set; }
-        [Column("Stock_Actual")]
+        [Column("StockActual")]
         public int StockActual { get; set; }
-        [Column("Precio_Preventa")]
+        [Column("PrecioPreventa")]
         public double PrecioPreventa { get; set; }
-        [Column("Costo_Preventa")]
+        [Column("CostoPreventa")]
         public double CostoPreventa { get; set; }
-        [Column("id_Presentacion_Med")]
+        [Column("idPresentacionMed")]
         public int IdPresentacionMed { get; set; }
-        [Column("id_Laboratorio")]
+        [Column("idLaboratorio")]
         public int IdLaboratorio { get; set; }
-        [Column("id_Compra")]
+        [Column("idCompra")]
         public int IdCompra { get; set; }
 
         [ForeignKey(nameof(IdCompra))]
@@ -56,5 +60,10 @@ namespace SIstemaFarmaciaFinal.Models
         public virtual ICollection<Medicamento> Medicamentos { get; set; }
         [InverseProperty("IdInventarioNavigation")]
         public virtual ICollection<Venta> Venta { get; set; }
+
+        //public static implicit operator Inventario(Inventario v)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

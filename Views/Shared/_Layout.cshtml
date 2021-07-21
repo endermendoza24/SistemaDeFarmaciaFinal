@@ -29,25 +29,45 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Categorias" asp-action="Crear">Categorias</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Personal" asp-action="Crear">Personal</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Laboratorio" asp-action="Crear">Laboratorio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Presentacion" asp-action="Crear">Presentacion</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Medicamentos" asp-action="Crear">Medicamento</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Inventario" asp-action="Crear">Inventario</a>
-                        </li>
+                        @*<li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Categorias" asp-action="Crear">Categorias</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Personal" asp-action="Crear">Personal</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Laboratorio" asp-action="Crear">Laboratorio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Presentacion" asp-action="Crear">Presentacion</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Medicamentos" asp-action="Crear">Medicamento</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Inventario" asp-action="Crear">Inventario</a>
+        </li>*@
 
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Catalogos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Categorias" asp-action="Crear">Categorias</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Personal" asp-action="Crear">Personal</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Laboratorio" asp-action="Crear">Laboratorio</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Presentacion" asp-action="Crear">Presentacion</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Medicamentos" asp-action="Crear">Medicamento</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Inventario" asp-action="Crear">Inventario</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Ventas" asp-action="Ventas">Ventas</a>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Compras" asp-action="Compras">Compras</a>
+                        </li>
+                        
 
                     </ul>
                     <partial name="_LoginPartial" />
