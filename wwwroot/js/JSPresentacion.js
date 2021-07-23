@@ -87,7 +87,7 @@ function loadDataTable() {
             "url": "/Presentacion/Todas"
         },
         "columns": [
-            { "data": "idPresentacionMed", "width": "10%" }, //se deben escribir a como estan en la base de datos, exceptuando si van separados por guion bajo, en ese caso no se debe de poner el guion
+            { "data": "idPresentacionMed", "width": "5.0%" }, //se deben escribir a como estan en la base de datos, exceptuando si van separados por guion bajo, en ese caso no se debe de poner el guion
             { "data": "unidadEnvasado", "width": "15%" },
             { "data": "formaPresentacion", "width": "15%" },
             { "data": "concentracion", "width": "15%" },

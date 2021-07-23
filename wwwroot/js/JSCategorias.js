@@ -27,11 +27,11 @@ function eliminar($id) {
 
     swal({
         title: "Mensaje",
-        text: "¿Desea eliminar la categoria seleccionada?",
+        text: "¿Desea eliminar la categoría seleccionada?",
         type: "warning",
         showCancelButton: true,
 
-        confirmButtonText: "Si",
+        confirmButtonText: "Sí",
         confirmButtonColor: "#DD6B55",
 
         cancelButtonText: "No",
@@ -52,11 +52,11 @@ function eliminar($id) {
                 success: function (data) {
 
                     if (data.resultado) {
-                        location.href = '/Categorias/Todas';
+                        //datatable.ajax.reload();
 
 
                     } else {
-                        swal("Mensaje", "No se pudo eliminar la categoria", "warning")
+                        swal("Mensaje", "No se pudo eliminar ", "warning")
                     }
                 },
                 error: function (error) {
@@ -66,7 +66,7 @@ function eliminar($id) {
 
                 },
             });
-        })};
+        });
 
 }
 // cargar la tabla...
