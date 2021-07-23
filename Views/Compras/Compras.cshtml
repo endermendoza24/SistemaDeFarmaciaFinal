@@ -125,8 +125,8 @@
                             <input type="text" class="form-control" placeholder="Datos clientes">
                         </div>
                         <div class="col-lg-6">
-                            <h5>Numero recibo</h5>
-                            <input type="text" class="form-control" placeholder="No Factura">
+                            <h5>Numero recibo</h5>                                                          
+                            <input type="text" id="numRecibo" class="form-control" value="" placeholder="Numero de recibo">
                         </div>
                     </div>
                     <br>
@@ -479,8 +479,7 @@
                     <button class="btn btn-success" data-toggle="modal" data-target="#GenerarModal">Guardar compra</button>
                 </span>
             </div>
-
-
+           
             <script>
 
                 $('#MiModal').on('shown.bs.modal', function () {

@@ -47,7 +47,7 @@ namespace SIstemaFarmaciaFinal.Controllers
                 {
                     Inv = new Inventario()
                     {
-                        IdInventario = (int)reader["idInventario"],
+                        IdInventario = (System.DateTime)reader["idInventario"],
                         FechaEntradaInventario = reader["fechaEntradaInventario"].ToString(),
                         NombreComercial = reader["nombreComercial"].ToString(), //  Se pone el nombre exacto que esta en la tabla de la bd                        
                         StockInicial = (int)reader["StockInicial"],
@@ -119,7 +119,7 @@ namespace SIstemaFarmaciaFinal.Controllers
                 {
                     response.Add(new Inventario()
                     {
-                        IdInventario = (int)reader["idInventario"],
+                        IdInventario = (System.DateTime)reader["idInventario"],
                         FechaEntradaInventario = reader["fechaEntradaInventario"].ToString(),
                         NombreComercial = reader["nombreComercial"].ToString(), //  Se pone el nombre exacto que esta en la tabla de la bd                        
                         StockInicial = (int)reader["StockInicial"],

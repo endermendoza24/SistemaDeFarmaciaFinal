@@ -24,48 +24,29 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        @*<li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Categorias" asp-action="Crear">Categorias</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Personal" asp-action="Crear">Personal</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Laboratorio" asp-action="Crear">Laboratorio</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Presentacion" asp-action="Crear">Presentacion</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Medicamentos" asp-action="Crear">Medicamento</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Inventario" asp-action="Crear">Inventario</a>
-        </li>*@
-
+                            @*<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>*@
+                        </li>                       
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Catalogos
+                                Catálogos
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Categorias" asp-action="Crear">Categorias</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Categorias" asp-action="Crear">Categorías</a>
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Personal" asp-action="Crear">Personal</a>
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Laboratorio" asp-action="Crear">Laboratorio</a>
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Presentacion" asp-action="Crear">Presentacion</a>
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Medicamentos" asp-action="Crear">Medicamento</a>
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Inventario" asp-action="Crear">Inventario</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Presentacion" asp-action="Crear">Presentación</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Medicamentos" asp-action="Crear">Medicamentos</a>
+                                @*<a class="nav-link text-dark" asp-area="" asp-controller="Inventario" asp-action="Crear">Inventario</a>*@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Ventas" asp-action="Ventas">Ventas</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Ventas" asp-action="Ventas">Detalle de ventas</a>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Compras" asp-action="Compras">Compras</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Compras" asp-action="Compras">Detalle de compras</a>
                         </li>
                         
 
@@ -83,7 +64,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - Farmacia sistema - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2021 - Farmacia sistema - <a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

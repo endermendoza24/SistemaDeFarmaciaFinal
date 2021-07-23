@@ -19,10 +19,10 @@ namespace SIstemaFarmaciaFinal.Models
 
         [Key]
         [Column("idInventario")]
-        public int IdInventario { get; set; }
+        public DateTime IdInventario { get; set; }
         [Required]
         [Column("fechaEntradaInventario")]
-        [StringLength(50)]
+        
         public string FechaEntradaInventario { get; set; }
         [Required]
         [Column("nombreComercial")]

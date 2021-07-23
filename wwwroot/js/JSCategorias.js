@@ -52,7 +52,7 @@ function eliminar($id) {
                 success: function (data) {
 
                     if (data.resultado) {
-                        //datatable.ajax.reload();
+                        location.href = '/Categorias/Todas';
 
 
                     } else {
@@ -66,7 +66,7 @@ function eliminar($id) {
 
                 },
             });
-        });
+        })};
 
 }
 // cargar la tabla...
@@ -86,7 +86,7 @@ function loadDataTable() {
                     return `<a href="/Categorias/Crear/${data}" class="btn btn-success text-white" style="cursor:pointer;">
                          Editar
                             </a>` +
-                        "<button class='btn btn-danger btn-sm ml-2' type='button' onclick='eliminar(" + data + ")'>Delete</button>"
+                        "<button class='btn btn-danger btn-sm ml-2' type='button' onclick='eliminar(" + data + ")'>Borrar</button>"
                 },
             }
 
